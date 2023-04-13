@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+// 1. Описати всю сім'ю сімпсонів (5 персонажів)
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import './App.css';
+// import React from 'react';
+// import {Simpsons} from "./components/users/Simpsons";
+//
+// const App = () => {
+//     return (
+//         <div>
+//             <Simpsons/>
+//         </div>
+//     );
+// };
+//
+// export default App;
+//
+
+// 2. Створити компонент який описує персонажа (властивості id,name,status,species,gender,image) з цього апі
+// https://rickandmortyapi.com/
+//     https://rickandmortyapi.com/api/character
+//         Створити 6 персонажів
+
+import React from 'react';
+import {Persons} from "./components/users/Persons";
+
+
+const App = () => {
+    return (
+        <div>
+           <Persons/>
+        </div>
+    );
+};
 
 export default App;
