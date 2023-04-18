@@ -62,14 +62,19 @@
 // пости мають виводитись під компонетою Users (в App компоненті)
 
 
-import React from 'react';
-import Users from "./components/Users/Users";
-const App = () => {
-    return (
-        <div>
-            <Users/>
-        </div>
-    );
-};
-
-export default App;
+// import React, {useState} from 'react';
+// import Users from "./components/Users/Users";
+// import FullUsers from "./components/FullUser/FullUsers";
+//
+// const App = () => {
+//     let [userId, setUserId] = useState();
+//     return (
+//         <div>
+//             <Users setUserId={setUserId}/>
+//             {userId && <FullUsers userId={userId}/>}
+//
+//         </div>
+//     );
+// };
+//
+// export default App;
