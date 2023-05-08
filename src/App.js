@@ -1,5 +1,7 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
+import {DEC, decrement, increment, INC, reset, RESET} from "./redux/action";
+
 
 const App = () => {
 
@@ -7,25 +9,25 @@ const App = () => {
     console.log(store);
     let dispatch = useDispatch();
 
-    const increment = () => {
-        dispatch({type: 'INC', payload:2});
+    const onIncrement = () => {
+        dispatch(increment());
 
     };
 
-    const decrement = () => {
-        dispatch({type:'DEC', payload:3});
+    const onDecrement = () => {
+        dispatch(decrement());
     };
 
-    const res = () => {
-        dispatch({type:'RESET'});
+    const onReset = () => {
+        dispatch(reset());
     };
 
     return (
         <div>
             <h1>{store}</h1>
-            <button onClick={increment}>INC</button>
-            <button onClick={decrement}>DEC</button>
-            <button onClick={res}>RES</button>
+            <button onClick={onIncrement}>INC</button>
+            <button onClick={onDecrement}>DEC</button>
+            <button onClick={onReset}>RES</button>
         </div>
     );
 };
